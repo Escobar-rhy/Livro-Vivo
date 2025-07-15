@@ -1,0 +1,202 @@
+/* Importação de fontes para a atmosfera */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    background-image: url('https://wallpapers.com/images/hd/coraline-dark-forest-w057oojd9r2z177l.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evita barras de rolagem */
+    font-family: 'Open Sans', sans-serif;
+    color: #eee;
+}
+
+.book-container {
+    width: 700px; /* Largura do livro */
+    height: 800px; /* Altura do livro */
+    position: relative;
+    perspective: 1500px; /* Mais perspectiva para o efeito de virar a página */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7); /* Sombra mais intensa */
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(to right, #0a0a0a, #330033); /* Gradiente escuro para o livro */
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #0a0a0a, #330033); /* Gradiente para as páginas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out, opacity 0.6s ease-in-out; /* Transição mais longa */
+    transform-origin: left center;
+    z-index: 1;
+    pointer-events: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+}
+
+/* Estilos específicos para a Capa */
+#page0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/834/759/790/coraline-movie-wallpaper-preview.jpg'); /* Imagem de fundo da capa */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+}
+
+.title-glow {
+    font-family: 'Creepster', cursive;
+    font-size: 4em;
+    color: #ff00ff; /* Cor neon/brilhante */
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; /* Efeito de brilho */
+    animation: pulseGlow 2s infinite alternate ease-in-out; /* Animação de pulso */
+    margin-bottom: 20px;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1); text-shadow: 0 0 10px #ff00ff; }
+    100% { transform: scale(1.02); text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff; }
+}
+
+.subtitle-text {
+    font-size: 1.5em;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+#startButton {
+    background-color: #8a2be2; /* Cor mais sombria */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#startButton:hover {
+    background-color: #6a0dad;
+    transform: translateY(-3px);
+}
+
+.page h2 {
+    font-family: 'Creepster', cursive;
+    color: #ff66ff; /* Cores que remetem ao tema */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page p {
+    color: #ccc;
+    line-height: 1.8;
+    flex-grow: 1;
+    padding: 0 20px;
+    font-size: 1.1em;
+}
+
+.page button {
+    background-color: #550055; /* Botões escuros */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.page button:hover {
+    background-color: #330033;
+    transform: translateY(-2px);
+}
+
+/* --- Efeito de TV Antiga (Página 3) --- */
+.special-effect-page {
+    position: relative; /* Para os overlays */
+    background-color: #000; /* Fundo escuro para a página de efeito */
+}
+
+.tv-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite interação com o texto/botões por baixo */
+    background: transparent; /* Começa transparente */
+}
+
+/* --- Efeito Lanterna (Página 4) --- */
+.image-with-flashlight-container {
+    position: relative;
+    width: 500px; /* Tamanho da imagem na página */
+    height: 350px;
+    overflow: hidden;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+#darknessImage {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: brightness(0.1) grayscale(100%); /* Imagem começa bem escura e preto e branco */
+    transition: filter 1.5s ease-in-out; /* Transição para o brilho da imagem */
+}
+
+.image-with-flashlight-container.lit #darknessImage {
+    filter: brightness(1) grayscale(0%); /* Imagem fica clara e colorida */
+}
+
+.flashlight-beam {
+    position: absolute;
+    bottom: -100%; /* Começa bem abaixo da imagem */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+                rgba(255, 255, 200, 0.6) 0%, 
+                rgba(255, 255, 200, 0.4) 15%, 
+                rgba(0, 0, 0, 0) 60% 
+              );
+    opacity: 0;
+    pointer-events: none;
+    transition: bottom 1.5s ease-out, opacity 1s ease-out;
+}
+
+.flashlight-beam.on {
+    bottom: 0;
+    opacity: 1;
+}
+
+.flashlight-button {
+    background-color: #ffd700; /* Dourado */
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.flashlight-button:hover {
+    background-color: #ccac00;
+}

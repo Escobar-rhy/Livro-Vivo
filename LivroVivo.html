@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coraline e o Mundo Secreto - Livro Vivo</title>
+    <link rel="stylesheet" href="LivroVivo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="book-container"> 
+        <div class="page" id="page0">
+            <h1 class="title-glow">Coraline e o Mundo Secreto</h1>
+            <p class="subtitle-text">Uma Viagem Além da Porta</p>
+            <button id="startButton" onclick="nextPage()">Começar a Aventura</button>
+        </div>
+
+        <div class="page" id="page1" style="display:none;">
+            <h2>A Mudança Para o Palácio Cor-de-Rosa</h2>
+            <p>Coraline Jones, uma jovem curiosa com cabelo azul, se muda com seus pais, que são escritores e vivem ocupados, para um apartamento num casarão antigo chamado Palácio Cor-de-Rosa. O lugar é estranho, com vizinhos excêntricos: as ex-atrizes Miss Spink e Miss Forcible, que vivem com cães velhinhos e fazem previsões com folhas de chá, e o Sr. Bobinsky, um ginasta russo que treina ratos para um circo. Coraline se sente entediada e ignorada, e o tédio a leva a explorar a nova casa...</p>
+            <button onclick="nextPage()">Próxima Página</button>
+        </div>
+
+        <div class="page" id="page2" style="display:none;">
+            <h2>A Pequena Porta Trancada</h2>
+            <p>Em uma tarde chuvosa, Coraline descobre uma pequena porta na sala de estar, emparedada com tijolos. Seus pais, sem paciência para suas queixas de tédio, a ignoram. No dia seguinte, a curiosidade de Coraline a faz implorar pela chave. Para sua surpresa, seu pai a abre, mas revela apenas uma parede de tijolos. Durante a noite, um rato traz uma mensagem estranha: "Não cruze o limiar". Coraline é intrigada. Ela sente que algo está lá, além dos tijolos. Ao acordar, a porta não está mais emparedada. O que antes era tijolo, agora é um túnel escuro e convidativo...</p>
+            <button onclick="prevPage()">Página Anterior</button>
+            <button onclick="nextPage()">Próxima Página</button>
+        </div>
+
+        <div class="page special-effect-page" id="page3" style="display:none;">
+            <h2>O Outro Lado</h2>
+            <p>Coraline atravessa o túnel e emerge em um mundo quase idêntico ao seu, mas estranhamente melhor. As cores são mais vibrantes, a comida é deliciosa, e seus Outros Pais são atenciosos e divertidos. Mas há uma diferença perturbadora: eles têm botões no lugar dos olhos. A Outra Mãe é alta e magra, com dedos longos e unhas afiadas. O Outro Pai toca piano alegremente. Tudo parece perfeito, mas uma sensação de pavor começa a se instalar. **(Passe o mouse ou toque aqui para sentir a distorção da realidade!)**</p>
+            <div class="tv-overlay" id="tvOverlay"></div>
+            <button onclick="prevPage()">Página Anterior</button>
+            <button onclick="nextPage()">Próxima Página</button>
+        </div>
+
+        <div class="page special-effect-page" id="page4" style="display:none;">
+            <h2>O Convite da Outra Mãe</h2>
+            <p>A Outra Mãe a convida a ficar para sempre nesse mundo "perfeito", mas para isso, Coraline teria que ter seus próprios olhos substituídos por botões. Coraline recusa, sentindo um arrepio na espinha. Ela percebe que a Outra Mãe não é tão carinhosa quanto parece. O ambiente começa a se deteriorar, mostrando sua verdadeira face sombria. **(Clique na lanterna para revelar o que está escondido!)**</p>
+            <div class="image-with-flashlight-container">
+                <img id="darknessImage" src="https://wallpapers.com/images/high/creepy-coraline-art-d193d53m6j9zjj9a.webp" alt="Sombra da Outra Mãe">
+                <div class="flashlight-beam" id="flashlightBeam"></div>
+            </div>
+            <button class="flashlight-button" onclick="toggleFlashlightEffect()">Acender Lanterna</button>
+            <button onclick="prevPage()">Página Anterior</button>
+            <button onclick="nextPage()">Próxima Página</button>
+        </div>
+
+        <div class="page" id="page5" style="display:none;">
+            <h2>O Desafio e as Crianças Fantasma</h2>
+            <p>Coraline é aprisionada pela Outra Mãe, que revela sua verdadeira natureza de Beldam, uma bruxa que se alimenta de almas de crianças. Na prisão, Coraline encontra os fantasmas de três crianças que também foram enganadas pela Beldam no passado. Eles a alertam sobre o perigo e pedem ajuda para recuperar suas almas. Coraline, com a ajuda do Gato Preto, aceita um jogo: se ela encontrar as almas das crianças e seus verdadeiros pais, todos serão libertados.</p>
+            <button onclick="prevPage()">Página Anterior</button>
+            <button onclick="nextPage()">Próxima Página</button>
+        </div>
+
+        <div class="page" id="page6" style="display:none;">
+            <h2>A Batalha Final e a Chave</h2>
+            <p>Coraline enfrenta a Beldam em um confronto aterrorizante, usando sua inteligência e coragem. Ela recupera as almas das crianças fantasmas e resgata seus pais de uma armadilha de neve. Com a ajuda do Gato, Coraline consegue prender a mão da Outra Mãe na porta entre os mundos, usando a chave. Ela retorna ao seu mundo, exausta mas vitoriosa. No entanto, a mão da Beldam ainda está à espreita...</p>
+            <button onclick="prevPage()">Página Anterior</button>
+            <button onclick="nextPage()">Próxima Página</button>
+        </div>
+
+        <div class="page" id="page7" style="display:none;">
+            <h2 class="title-glow">O Final Feliz... Ou Quase</h2>
+            <p>De volta ao Palácio Cor-de-Rosa, tudo parece normal, mas Coraline sabe que o perigo não passou completamente. A mão da Beldam, separada do corpo, tenta roubar a chave da porta para o Outro Mundo. Coraline, com a ajuda do Gato e dos ratos do Sr. Bobinsky, arma uma armadilha e joga a mão e a chave no poço. Ela finalmente convida seus vizinhos para um piquenique e começa a desfrutar de sua nova vida, mais valorizada por seus pais e com a consciência do perigo que enfrentou. Mas a porta permanece...</p>
+            <button onclick="prevPage()">Página Anterior</button>
+            <button onclick="restartBook()">Reiniciar Livro</button>
+        </div>
+
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.dl.dropboxusercontent.com/s/s722r26k61q5r5f/coraline_theme.mp3?dl=0" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <script src="Livrovivo.js"></script>
+</body>
+</html>

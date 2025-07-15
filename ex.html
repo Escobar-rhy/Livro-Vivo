@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Livro Vivo</title>
+    <link rel="stylesheet" href="ex.css">
+</head>
+<body>
+    <div class="book-container">        
+
+        <div class="page" id="page0">
+            <h1>IT A COISA - Stephen King</h1>
+            <p>O Resumo de uma Grande História de Terror</p>
+            <button id="capaBnt" class="capaBnt" onclick="nextPage()">Começar a Ler</button>
+        </div>
+
+        <div class="page" id="page1" style="display:none;">
+            <h2>Capitulo 1</h2>
+            <p></p>
+            <button onclick="nextPage()">Próxima Página</button>
+        </div>
+        
+        <div class="page" id="page2" style="display:none;">
+            <h2>Capitulo 2</h2>
+            <p></p>
+            <button onclick="prevPage()">Página Anterior</button>
+            <button onclick="nextPage()">Próxima Página</button>
+        </div>
+
+        <div class="page" id="page3" style="display:none;">
+            <h2>Capitulo 3</h2>
+            <p></p>
+            <button onclick="prevPage()">Página Anterior</button>
+        </div>
+
+        <div class="page" id="page4" style="display:none;">
+            <h2>Capitulo 4</h2>
+            <p></p>
+            <button onclick="prevPage()">Página Anterior</button>
+        </div>
+
+        <div class="page" id="page5" style="display:none;">
+            <h2>Capitulo 5</h2>
+            <p></p>
+            <button onclick="prevPage()">Página Anterior</button>
+            <button onclick="nextPage()">Próxima Página</button>
+        </div>
+    </div>
+
+    <script src="ex.js"></script>
+</body>
+</html>
