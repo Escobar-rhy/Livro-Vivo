@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@400;700&display=swap');
+
+.capaLivroPrinc{
+    background-image: url('https://images6.alphacoders.com/112/1126040.jpg');
+    
+}
+.capaLivroh1{
+    color: #920000;
+    top: 100%;
+    font-family: 'Creepster', cursive;
+    font-size: 8em;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #c00202, 0 0 30px #8b0202; /* Efeito de brilho */
+    animation: pulseGlow 2s infinite alternate ease-in-out; /* Animação de pulso */
+}
+    @keyframes pulseGlow {
+        0% { transform: scale(1); text-shadow: 0 0 10px #ff0000; }
+        100% { transform: scale(1.02); text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff; }
+}
