@@ -1,18 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@400;700&display=swap');
 
-.capaLivroPrinc{
-    background-image: url('https://images6.alphacoders.com/112/1126040.jpg');
-    
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /*tira a barra de rolagem*/
+    display: flex;
 }
+
 .capaLivroh1{
     color: #920000;
-    top: 100%;
     font-family: 'Creepster', cursive;
-    font-size: 8em;
+    font-size: 20em;
+    position: absolute;
+    top: -20%; /*baixo e cima*/
+    right: 300px; /*move pra esquerda*/
     text-shadow: 0 0 10px #ff0000, 0 0 20px #c00202, 0 0 30px #8b0202; /* Efeito de brilho */
     animation: pulseGlow 2s infinite alternate ease-in-out; /* Animação de pulso */
 }
-    @keyframes pulseGlow {
-        0% { transform: scale(1); text-shadow: 0 0 10px #ff0000; }
-        100% { transform: scale(1.02); text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff; }
+
+.capaLivroh3{
+    color: #ffffff;
+    font-family: 'Creepster', cursive;
+    font-size: 10em;
+    position: absolute;
+    right: 200px; /*move lado*/
+    margin-top: 400px; /*cima e baixo*/
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #c00202, 0 0 30px #8b0202; /* Efeito de brilho */
+    animation: pulseGlow 2s infinite alternate ease-in-out; /* Animação de pulso */
 }
+.BotaoCapa{
+    background-color: #920000;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    margin-top: 50px;
+    position: absolute;
+    right: 303px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease; /*animação*/
+    animation: button 2s infinite alternate ease-in-out; /*animação do botão*/
+}
+
+.BotaoCapa:hover{
+    background-color: #ff0000;
+    transform: translateY(-3px);
+}
+
+.capaLivroPrinc{
+    background-image: url('https://images6.alphacoders.com/112/1126040.jpg');
+    filter: contrast(190%);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+    @keyframes pulseGlow {
+        10% { transform: scale(1); text-shadow: 0 0 10px #ff0000; }
+        10% { transform: scale(1.02); text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff; }
+}
+    @keyframes button {
+        100% { transform: rotateY(180deg); }
+}
+
