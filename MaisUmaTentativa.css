@@ -31,27 +31,27 @@ body{
 .BotaoCapa{
     background-color: #920000;
     color: #ffffff;
-    padding: 15px 30px;
-    font-size: 1.5em;
-    border-radius: 10px;
-    margin-top: 50px;
+    padding: 15px 30px; /*margem interna*/
+    font-size: 1.5em; /*tamanho da fonte*/
+    border-radius: 10px; /*borda*/
+    margin-top: 700px; /*cima e baixo*/
     position: absolute;
-    right: 303px;
-    cursor: pointer;
-    border: none;
+    right: 306px; /*lado*/
+    cursor: pointer; /*maozinha*/
+    border: none; /*sem borda*/
     transition: background-color 0.3s ease, transform 0.2s ease; /*animação*/
     animation: button 2s infinite alternate ease-in-out; /*animação do botão*/
 }
 
 .BotaoCapa:hover{
     background-color: #ff0000;
-    transform: translateY(-3px);
+    transform: translateY(-3px); /*animação na cor*/
 }
 
 .capaLivroPrinc{
     background-image: url('https://images6.alphacoders.com/112/1126040.jpg');
-    filter: contrast(190%);
-    background-size: cover;
+    filter: contrast(190%); /*contraste*/
+    background-size: cover; /*alinhar a imagem*/
     background-position: center;
     height: 100vh;
     width: 100%;
@@ -59,9 +59,9 @@ body{
 
     @keyframes pulseGlow {
         10% { transform: scale(1); text-shadow: 0 0 10px #ff0000; }
-        10% { transform: scale(1.02); text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff; }
+        10% { transform: scale(1.02); text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff; } /*animaçoes das letras*/
 }
     @keyframes button {
-        100% { transform: rotateY(180deg); }
+        100% { transform: rotateY(180deg); } /*animação do botão*/
 }
 
